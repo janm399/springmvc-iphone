@@ -1,0 +1,7 @@
+Manifest-Version: 1.0
+Bundle-Version: 1.0.0
+Bundle-Name: Service
+Bundle-ManifestVersion: 2
+Bundle-SymbolicName: net.cakesolutions.smvci.service
+Import-Bundle: net.cakesolutions.smvci.domain;version="[1.0.0,1.0.0]"
+

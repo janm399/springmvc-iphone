@@ -1,0 +1,3 @@
+Bundle-ManifestVersion: 2
+Bundle-SymbolicName: net.cakesolutions.smvci.domain
+Bundle-Version: 1.0.0
