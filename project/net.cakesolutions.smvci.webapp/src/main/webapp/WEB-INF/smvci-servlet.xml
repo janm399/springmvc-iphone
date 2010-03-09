@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xsi:schemaLocation="http://www.springframework.org/schema/osgi http://www.springframework.org/schema/osgi/spring-osgi.xsd
+		http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-3.0.xsd
+		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
+
+	<context:component-scan base-package="net.cakesolutions.smvci.webapp" />
+	
+	<bean id="conversionService" class="org.springframework.context.support.ConversionServiceFactoryBean"/>
+	<bean class="org.springframework.web.servlet.mvc.annotation.AnnotationMethodHandlerAdapter">
+		<property name="webBindingInitializer">
+			<bean class="org.springframework.web.bind.support.ConfigurableWebBindingInitializer">
+				<property name="conversionService">
+					<ref local="conversionService" />
+				</property>
+				<!-- 
+				<property name="validator">
+					<bean class="org.springframework.validation.beanvalidation.LocalValidatorFactoryBean" />
+				</property>
+				-->
+			</bean>
+		</property>
+	</bean>
+
+	<bean class="org.springframework.web.servlet.view.ContentNegotiatingViewResolver" p:order="0">
+		<property name="mediaTypes">
+			<map>
+				<entry key="json"
+					value="#{T(org.springframework.web.servlet.view.json.MappingJacksonJsonView).DEFAULT_CONTENT_TYPE}" />
+			</map>
+		</property>
+		<property name="defaultViews">
+			<bean class="org.springframework.web.servlet.view.json.MappingJacksonJsonView" />
+		</property>
+	</bean>
+
+	<bean class="org.springframework.web.servlet.mvc.annotation.AnnotationMethodHandlerAdapter" />
+	<bean class="org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping" />
+	<bean id="viewNameTranslator" class="org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator"
+		p:prefix="" p:stripExtension="true" />
+
+	<bean class="net.cakesolutions.smvci.webapp.servlet.view.UserAgentViewResolver">
+		<property name="viewResolvers">
+			<map>
+				<entry key="*iPhone; U*">
+					<bean class="org.springframework.web.servlet.view.InternalResourceViewResolver" p:prefix="/WEB-INF/views-iphone/en_GB/"
+						p:suffix=".jsp" />
+				</entry>
+			</map>
+		</property>
+		<property name="defaultViewResolver">
+			<bean class="org.springframework.web.servlet.view.InternalResourceViewResolver" p:prefix="/WEB-INF/views/en_GB/"
+				p:suffix=".jsp" />
+		</property>
+	</bean>
+	
+</beans>

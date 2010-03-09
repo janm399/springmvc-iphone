@@ -3,4 +3,7 @@
   <bundle symbolicName="net.cakesolutions.smvci.domain"/>
   <bundle symbolicName="net.cakesolutions.smvci.service"/>
   <bundle symbolicName="net.cakesolutions.smvci.webapp"/>
+  <bundle symbolicName="net.cakesolutions.smvci.api"/>
+  <bundle symbolicName="net.cakesolutions.smvci.core"/>
+  <bundle symbolicName="net.cakesolutions.smvci.infrastructure.hsqldb"/>
 </com.springsource.server.ide.par:Par>

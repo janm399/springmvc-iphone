@@ -1,0 +1,8 @@
+Manifest-Version: 1.0
+Bundle-Version: 1.0.0
+Bundle-Name: Hsqldb
+Bundle-ManifestVersion: 2
+Bundle-SymbolicName: net.cakesolutions.smvci.infrastructure.hsqldb
+Import-Bundle: com.springsource.org.hsqldb;version="[1.8.0.9,1.8.0.9]"
+Import-Library: org.springframework.spring;version="[3.0.0.RELEASE,3.0.0.RELEASE]"
+Import-Package: javax.sql

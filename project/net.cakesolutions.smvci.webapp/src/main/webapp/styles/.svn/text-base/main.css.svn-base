@@ -1,0 +1,589 @@
+/* Reset CSS (from http://meyerweb.com/eric/tools/css/reset/) */
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+  font-family: helvetica, serif, sans-serif;
+  font-size: 10pt;
+}
+body {
+  line-height: 1;
+  width: 90%;
+}
+ol, ul {
+  list-style: none;
+}
+blockquote, q {
+  quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+/* remember to define focus styles! */
+:focus {
+	outline: 0;
+}
+/* tables still need 'cellspacing="0"' in the markup */
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+textarea {
+	width: 35em;
+	height: 8em;
+	display: block;
+}
+body {
+	margin: 20pt;
+	padding:0 20pt 20pt 20pt;
+}
+ul.tabs {
+	margin: 0;
+	padding: 0;
+	float: left;
+	list-style: none;
+	height: 32px; /*--Set height of tabs--*/
+	border-bottom: 1px solid #999;
+	border-left: 1px solid #999;
+	width: 100%;
+}
+ul.tabs li {
+	float: left;
+	margin: 0;
+	padding: 0;
+	height: 31px; /*--Subtract 1px from the height of the unordered list--*/
+	line-height: 31px; /*--Vertically aligns the text within the tab--*/
+	border: 1px solid #999;
+	border-left: none;
+	margin-bottom: -1px; /*--Pull the list item down 1px--*/
+	overflow: hidden;
+	position: relative;
+	background: #e0e0e0;
+}
+ul.tabs li a {
+	text-decoration: none;
+	color: #000;
+	display: block;
+	font-size: 1.2em;
+	padding: 0 20px;
+	border: 1px solid #fff; /*--Gives the bevel look with a 1px white border inside the list item--*/
+	outline: none;
+}
+ul.tabs li a:hover {
+	background: #ccc;
+}
+html ul.tabs li.active, html ul.tabs li.active a:hover  { /*--Makes sure that the active tab does not listen to the hover properties--*/
+	background: #fff;
+	border-bottom: 1px solid #fff; /*--Makes the active tab look like it's connected with its content--*/
+}
+
+/* General */
+div.container {
+	border-top: 1px solid #999;
+	margin-top: 8pt;
+	border-top: none;
+	overflow: hidden;
+	clear: both;
+	float: left; 
+	width: 100%;
+	background: #fff;
+	height: 55em;
+}
+div.subcontainer {
+	padding-left: 10pt;
+	padding-top: 5pt;
+	padding-right: 5pt;
+	height: 100%;
+	width: 100%;
+}
+
+a {
+	text-decoration: none;
+}
+a:hover {
+	text-decoration: underline;
+}
+
+h1 {
+  font-size:12pt;
+  margin: 10pt 0;
+}
+
+span.input, span.button {
+  margin: 4pt;
+}
+
+/* Table */
+table {
+}
+table thead tr th {
+	background-color:#e0e0e0;
+	text-align: left;
+	padding: 3pt 4pt;
+}
+table thead tr th.last {
+	background-color:#fff;
+}
+table tr.odd {
+	background-color:#EDF4F5;
+}
+table tr.even {
+	background-color:#fff;
+}
+table tr td {
+	padding: 3pt 4pt;
+	vertical-align: top;
+	border:1pt solid #aaa;
+	width: 100pt;
+}
+table tr td a {
+	color: #F78F1E;
+}
+table tr td input {
+	float:left;
+}
+table tr td.last {
+	width: 14em;
+}
+table.hoverable tr:hover td {
+	background-color: #cce0e3;
+}
+table tr td.note {
+	width: 35em;
+}
+table tr td.short {
+	width: 3em;
+}
+label {
+	width: 6em; 
+	float: left;
+	margin-top: 0.4em; 
+	text-align: right;
+	margin-right: 0.5em;
+	display: inline;
+}
+label.print {
+	float: none;
+	height: 100%;
+	vertical-align: middle;
+}
+form#print p {
+	height: 13em;
+}
+form p { 
+	height: 2.5em;
+	margin: 0;
+	padding: 0;
+}
+input.short {
+	width: 4em;
+}
+input.long {
+	width: 30em;
+}
+div#patient {
+	width: 100%;
+	height: 7em;
+	display: block;
+	border-bottom: 1px solid #7c7c7c;
+}
+div#left {
+	height: 45em;
+	padding: 4pt 4pt 0 4pt;
+	margin-right: 4pt;
+	width: 20em;
+	float: left;
+	border-right: 1px solid #7c7c7c;
+}
+div#right {
+	float: left;
+	padding: 4pt 4pt 0 4pt;
+	height: 45em;
+	/*width: 70em;*/
+}
+div#patient img {
+	float: left;
+	vertical-align: middle;
+}
+div#patientDetails {
+	float: left;
+	width: 30em;
+	height: 100%;
+}
+div#patientView {
+	padding-top: 3em;
+}
+fieldset { 
+	float: left; 
+	clear: both; 
+	width: 50em;
+	margin: 0 0 1.5em 0;
+	padding: 0;
+	border: 1px solid #BFBAB0;
+	background-color: #EDF4F5;
+	background-image: url(/images/fieldset_gradient.jpeg);
+	background-repeat: repeat-x;
+}
+fieldset legend {
+	padding: 6px;
+	font-weight: bold;
+}
+span.label {
+	width: 8.6em;
+	display: block;
+	text-align: right;
+	padding-right: 5pt;
+	float: left;
+	color: #7c7c7c;
+}
+span.input {
+	display: block;
+	float: left;
+}
+img.floatRight {
+	float: right;
+}
+
+
+/* -- jQuery Spinner related styling -- */
+.ui-spinner {
+	display: inline;
+	width: 15em;
+	position: relative;
+	overflow: hidden;
+	margin-right: 15px;
+}
+
+.ui-spinner-up,
+.ui-spinner-down {
+	width: 10%;
+	height: 55%;
+	font-size: 0.5em;
+	padding: 0;
+	margin: 2px 0 0 0;
+	z-index: 100;
+	text-align: center;
+	vertical-align: middle;
+	position: absolute;
+	right: -15px;
+	cursor: default;
+	border: 1px solid #999;
+	border-right: none;
+	border-top: none;
+}
+
+
+.ui-spinner-down {
+	bottom: 0;
+	border-bottom: 0;
+}
+
+.ui-spinner-up {
+	border-bottom: 0;
+}
+
+.ui-spinner-pressed {
+	background: #FEFEFE;
+}
+
+.ui-spinner-disabled {
+	background: #F4F4F4;
+	color: #CCC;
+}
+
+.mar {
+	border-style:solid;	
+	display:block;
+}
+
+.mar #course_box {	
+	
+	border-left: 0.1em solid;
+	
+	margin-top:1em;	
+	float:left;	
+	border-color: black;	
+		
+}
+.mar #course_box #info {
+	border-top: 0.1em solid;
+	width: 20em;
+	float:left;
+}
+	
+.mar #course_box #signature_box {		
+	border-top: 0.1em solid;	
+	border-right: 0.1em solid;
+	border-bottom: 0.1em solid;
+	border-color: black;	
+	width: 20em;
+	height: 1.5em;
+	float:left;	
+}
+
+.mar #course_box #course_keys {
+	float:left;		
+	width: 60em;	
+}
+
+.mar #course_box #all_days {	
+	margin-left:20em;		
+}
+
+.mar #time_axis {	
+	margin-left:20.1em;
+	height:4em;		
+}
+
+.mar #top_info {	
+	margin-left:0em;	
+	height:4em;
+		
+}
+
+.mar #patient_name {	
+	margin-left: 0em;	
+	background-color: lightblue;
+	color:black;
+	width: 19.95em;
+	height: 4em;
+	float: left;
+		
+}
+
+.mar #patient_info {
+	background-color: grey;	
+	height: 4em;	
+	float: left;		
+}
+
+.mar #beginning {	
+	margin-left: 0em;
+	margin-top: 1em;	
+	margin-left: 3.5em;
+	height: 1em;		
+}
+
+.mar #left_info {	
+	border-left: 0.1em solid;
+	border-bottom: 0.1em solid;
+	border-top: 0.1em solid;
+	height: 1.5em;
+	margin-top:3.15em;		
+	width: 20em;	
+	float:left;	
+	border-color: black;	
+		
+}
+
+.mar .day_box, .mar .day_box_large {	
+	border-left: 0.05em solid;		
+	border-top: 0.05em solid;
+	float:left;	
+	border-color: black;
+	width: 1.5em;
+}
+
+.mar .day_box_white {	
+	border-left: 0.05em solid;		
+	float:left;	
+	border-color: white;
+	width: 1.5em;
+}
+
+
+.mar .day_box_top {	
+	border-left: 0.05em solid transparent;	
+	border-bottom: 0.05em solid transparent;
+	float:left;	
+	width: 1.5em;
+}
+
+.mar .day_box_white {	
+	border-bottom: 0.05em solid black;		
+	border-left: 0.05em solid transparent;
+	float:left;	
+	width: 1.5em;
+}
+
+.mar .day_box_large_top {	
+	border-bottom: 0.05em solid transparent;		
+	border-left: 0.05em solid black;
+	float:left;	
+	width: 6em;
+}
+.mar .day_box_large {
+	width: 6em;
+}
+
+
+.mar .single_PDT_name_box {		
+	border-bottom: 0.05em solid;	
+	border-color: black;
+	width: 6em;
+	height: 1.5em;
+}
+
+.mar .single_PDT_name_box_top {		
+	border-bottom: 0.05em solid;
+	border-right: 0.05em solid;	
+	border-top: 0.05em solid;
+	border-color: black;
+	width: 6em;
+	height: 1.5em;
+}
+
+.mar .single_PDT_name_box_white {		
+	border-bottom: 0.05em solid;	
+	border-color: transparent;
+	width: 6em;
+	height: 1.5em;
+}
+
+.mar .single_PDT_box_white {		
+	border-right: 0.05em solid;
+	border-bottom: 0.05em solid;	
+	border-color: transparent;	
+	width: 1.5em;
+	height: 1.5em;
+}
+
+.mar .single_PDT_box_top {		
+	border-right: 0.05em solid;
+	border-bottom: 0.05em solid;	
+	border-top: 0.05em solid;
+	border-color: black;
+	width: 1.5em;
+	height: 1.5em;
+}
+
+.mar .single_PDT_box {		
+	border-right: 0.05em solid;
+	border-bottom: 0.05em solid;	
+	border-color: black;
+	width: 1.5em;
+	height: 1.5em;
+}
+
+.mar .single_PDT_box_white {		
+	border-right: 0.05em solid;
+	border-bottom: 0.05em solid;	
+	border-color: transparent;
+	width: 1.5em;
+	height: 1.5em;
+}
+
+.mar .one_instruction {
+	padding-top: 0.15em;
+	padding-left: 0.35em;	
+}
+.mar .one_cell {
+	padding-top: 0.15em;
+	padding-left: 0.15em;	
+}
+
+.wc1, .wc2, .wc2, .wc30 {
+	float:left;
+	width: 8.5em;
+	}
+.wc3, .wc4, .wc5, .wc6, .wc7, .wc15 {
+	float:right;
+	width: 8.5em;	
+	margin-right: -5em;
+}
+
+div.row {
+	width: inherit;
+	display: table-row;
+	height: 1.5em;
+}
+
+div.header {
+	!height: 2em;
+	display: table-row;
+	padding-bottom: 1.5em;
+	padding-right: 1em;
+	text-align: center;
+	vertical-align: middle;
+	margin: auto;
+	font-weight: 700;
+}
+
+div.cell {
+	height: 4em;
+	display: table-cell;
+	border-top: 0.1em solid black;
+	border-left: 0.1em solid black;
+	border-right: 0.1em solid black;
+	border-bottom: 0.1em solid black;
+	border-collapse: collapse;
+	padding: 0.5em 0.25em;
+}
+
+div.medication {
+	width: 10em;
+}
+
+div.medication_image {
+	width: 7em;
+}
+
+div.instruction {
+	width: 20em;
+}
+
+div.dose_time {
+	width: 5em;
+	text-align: center;
+}
+
+table.pic {
+	border: 1pt solid #aaa;
+}
+
+table.pic tr th {
+	border:1pt solid #aaa;
+}
+
+td.medication {
+	height: 4em;
+	width: 10em;
+}
+
+td.medication_image {
+	width: 7em;
+}
+
+td.instruction {
+	width: 20em;
+}
+
+td.dose_time {
+	width: 5em;
+	text-align: center;
+}
+
+tr.row {
+	height: 4em;
+	vertical-align: middle;
+}
+
+
+span.error {
+	color: red;
+}
