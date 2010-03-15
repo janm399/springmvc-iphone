@@ -16,4 +16,3 @@ Import-Bundle: net.cakesolutions.smvci.domain;version="[1.0.0,1.0.0]",
  com.springsource.org.hibernate;version="[3.3.1.GA,3.3.1.GA]"
 Web-ContextPath: /
 Import-Library: org.springframework.spring;version="[3.0.0.RELEASE,3.0.0.RELEASE]"
-
