@@ -1,3 +1,4 @@
 project/.metadata
 project/**/bin
 project/**/target
+project/**/build
