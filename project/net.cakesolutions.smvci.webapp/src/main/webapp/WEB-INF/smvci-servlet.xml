@@ -11,22 +11,6 @@
 
 	<context:component-scan base-package="net.cakesolutions.smvci.webapp" />
 	
-	<bean id="conversionService" class="org.springframework.context.support.ConversionServiceFactoryBean"/>
-	<bean class="org.springframework.web.servlet.mvc.annotation.AnnotationMethodHandlerAdapter">
-		<property name="webBindingInitializer">
-			<bean class="org.springframework.web.bind.support.ConfigurableWebBindingInitializer">
-				<property name="conversionService">
-					<ref local="conversionService" />
-				</property>
-				<!-- 
-				<property name="validator">
-					<bean class="org.springframework.validation.beanvalidation.LocalValidatorFactoryBean" />
-				</property>
-				-->
-			</bean>
-		</property>
-	</bean>
-
 	<bean class="org.springframework.web.servlet.view.ContentNegotiatingViewResolver" p:order="0">
 		<property name="mediaTypes">
 			<map>
@@ -41,8 +25,6 @@
 
 	<bean class="org.springframework.web.servlet.mvc.annotation.AnnotationMethodHandlerAdapter" />
 	<bean class="org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping" />
-	<bean id="viewNameTranslator" class="org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator"
-		p:prefix="" p:stripExtension="true" />
 
 	<bean class="net.cakesolutions.smvci.webapp.servlet.view.UserAgentViewResolver">
 		<property name="viewResolvers">
